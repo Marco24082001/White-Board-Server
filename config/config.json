@@ -4,20 +4,23 @@
     "password": "marco1312",
     "database": "whiteboarddb",
     "host": "localhost",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "operatorsAliases": false
   },
   "test": {
     "username": "root",
     "password": null,
     "database": "database_test",
     "host": "127.0.0.1",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "operatorsAliases": false
   },
   "production": {
     "username": "bda8b703b4eba7",
     "password": "b29dac98",
     "database": "heroku_a9ffc2178fbf613",
     "host": "us-cdbr-east-05.cleardb.net",
-    "dialect": "mysql"
+    "dialect": "mysql",
+    "operatorsAliases": false
   }
 }
