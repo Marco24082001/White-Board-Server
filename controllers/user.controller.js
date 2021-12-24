@@ -106,7 +106,7 @@ module.exports.resetPassword = async function(req, res) {
           subject: "password reset",
           html: `
             <p>You requested for password reset</p>
-            <h2>click in this <a href="http://localhost:3000/reset/${token}">link</a> to reset password</h2>
+            <h2>click in this <a href="${process.env.API_SERVER}/reset/${token}">link</a> to reset password</h2>
           `
         })
         res.json({message:"check your email"});
