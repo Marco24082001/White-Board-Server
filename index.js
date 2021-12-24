@@ -35,7 +35,7 @@ function onConnection(socket){
             Rooms.increaseRoom(roomId);
             userJoin(socket.id, _user.id, _user.username, _user.role_id, _user.photo, roomId);
             const listOfUsers = getRoomUsers(roomId);
-            socket.broadcast.in(roomId).emit('share-data', 'a person has joined the board');
+            // socket.broadcast.in(roomId).emit('share-data', 'a person has joined the board');
             io.in(roomId).emit('listOfUsers', listOfUsers);
         }
         else socket.emit('error', 'Board is full');

@@ -3,7 +3,7 @@ const Users = [];
 //join room to interact
 function userJoin(socketId, id, username, role_id, photo, room) {
     const user = {socketId, id, username, role_id, photo, room};
-    const index = Users.findIndex(user => user.id === id);
+    const index = Users.findIndex(user => {user.id === id && user.room === room});
     if(index === -1){
         Users.push(user);
     }
@@ -32,7 +32,6 @@ function changeRoleId(userId, roomId, role_id) {
     if(index != -1){
         Users[index].role_id = role_id;
     }
-    console.log(index);
     return index;
 }
 
